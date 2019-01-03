@@ -1,8 +1,9 @@
 ---
 ---
 
-@import "{{ site.theme }}";
 .highlight { }
-.header {
+header {
   width: 220px;
 }
+@import "{{ site.theme }}";
+
