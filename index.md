@@ -2,4 +2,4 @@
 layout: default
 ---
 # Getting Started
-{% include_relative pages.md %}
+Welcome to Git Docs
