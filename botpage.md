@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Heading
 
 This article introduces the Live Assist for *Microsoft Dynamics 365* **Bot as an Enabler Bot C# SDK**, running within the Azure Web App Bot Framework.
