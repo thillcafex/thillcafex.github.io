@@ -1,2 +1,2 @@
 # Getting Started
- [Bot Pages](botpage.md)
+{% include_relative pages.md %}
