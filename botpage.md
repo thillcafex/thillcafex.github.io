@@ -34,3 +34,66 @@ using Newtonsoft.Json;
 using System.Timers;
 using Cafex.LiveAssist.Bot;
 ```
+2. More Complex Code
+
+```c++
+        async void OnTimedEvent(Object source, ElapsedEventArgs eea)
+        {
+            if (chatContext != null)
+            {
+                // Create an upstream reply
+                var reply = JsonConvert.DeserializeObject<ConversationReference>(conversationRef)
+                    .GetPostToBotMessage().CreateReply();
+
+                // Create upstream connection on which to send reply 
+                var client = new ConnectorClient(new Uri(reply.ServiceUrl));
+
+                // Poll Live Assist for events
+                var chatInfo = await sdk.Poll(chatContext);
+
+                if (chatInfo != null)
+                {
+                    // ChatInfo.ChatEvents will contain events since last call to poll.
+                    if (chatInfo.ChatEvents != null && chatInfo.ChatEvents.Count > 0)
+                    {
+                        foreach (ChatEvent e in chatInfo.ChatEvents)
+                        {
+                            switch (e.Type)
+                            {
+                                // type is either "state" or "line".
+                                case "line":
+                                    // Source is either: "system", "agent" or "visitor"
+                                    if (e.Source.Equals("system"))
+                                    {
+                                        reply.From.Name = "system";
+                                    }
+                                    else if (e.Source.Equals("agent"))
+                                    {
+                                        reply.From.Name = chatInfo.AgentName;
+
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+
+                                    reply.Type = "message";
+                                    reply.Text = e.Text;
+                                    client.Conversations.ReplyToActivity(reply);
+                                    break;
+
+                                case "state":
+                                    // State changes
+                                    // Valid values: "waiting", "chatting", "ended"
+                                    if (chatInfo.State.Equals("ended"))
+                                    {
+                                        chatContext = null;
+                                    }
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+```
