@@ -1,1 +1,1 @@
- [Bot Pages](botpage.md)
+ [Bot Pages](./botpage.html)
