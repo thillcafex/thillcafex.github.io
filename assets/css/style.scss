@@ -1,9 +1,14 @@
 ---
 ---
 
+@import "{{ site.theme }}";
 .highlight { }
 header {
   width: 220px;
 }
-@import "{{ site.theme }}";
+h1,h2,h3 {
+    font-family: Lexia,Times,Times New Roman,serif;
+    line-height: 1.3;
+    font-weight: normal;
+}
 
