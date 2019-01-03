@@ -28,7 +28,7 @@ Based on the Microsoft **SimpleEchoBot** sample bot, make the following changes 
 
    The following packages are required:  
 
-```c++
+```csharp
 using Microsoft.Bot.Builder.ConnectorEx;
 using Newtonsoft.Json;
 using System.Timers;
@@ -36,7 +36,7 @@ using Cafex.LiveAssist.Bot;
 ```
 2. More Complex Code
 
-```c++
+```csharp
         async void OnTimedEvent(Object source, ElapsedEventArgs eea)
         {
             if (chatContext != null)
