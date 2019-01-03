@@ -3,4 +3,4 @@
 
 .highlight { }
 
-@import "{{ site.theme }}
+@import {{ site.theme }}
