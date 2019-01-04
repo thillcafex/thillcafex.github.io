@@ -24,6 +24,20 @@
         </ul>
       </header>
 
+      <!-- START MODAL -->
+      <div id="modal01" class="modal" onclick="this.style.display='none'">
+        <div class="content">
+          <img id="img01" style="width:100%">
+        </div>
+      </div>
+      <script>
+      function embiggen(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+      }
+      </script>
+    <!-- END MODAL -->
+      
       <section>
         {{ content }}
       </section>
