@@ -16,13 +16,10 @@ See also: [BotBuilder samples repository](https://github.com/Microsoft/BotBuilde
 1. Set the appropriate **Storage** and **Billing** requirements for your application.
 
    The significant parts of this process are:  
-    
    * Selecting a name which is unique within Azure
-   * Selecting the C# (Basic) Application
-   
+   * Selecting the C# (Basic) Application  
    ![alt](bot_images/img2.jpg)  
-    
-   This process may take Azure a few minutes to build.  
+ This process may take Azure a few minutes to build.  
     
 ### Step 4—Developing your application
 Based on the Microsoft **SimpleEchoBot** sample bot, make the following changes to the **EchoDialog.cs** file:
