@@ -28,17 +28,14 @@ See also: [BotBuilder samples repository](https://github.com/Microsoft/BotBuilde
 Based on the Microsoft **SimpleEchoBot** sample bot, make the following changes to the **EchoDialog.cs** file:
 
 1. Managing Imports
-
    The following packages are required:  
-
-```csharp
-using Microsoft.Bot.Builder.ConnectorEx;
-using Newtonsoft.Json;
-using System.Timers;
-using Cafex.LiveAssist.Bot;
-```
+    ```csharp
+    using Microsoft.Bot.Builder.ConnectorEx;
+    using Newtonsoft.Json;
+    using System.Timers;
+    using Cafex.LiveAssist.Bot;
+    ```
 1. More Complex Code
-
 ```csharp
         async void OnTimedEvent(Object source, ElapsedEventArgs eea)
         {
