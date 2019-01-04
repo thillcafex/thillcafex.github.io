@@ -13,7 +13,7 @@ See also: [BotBuilder samples repository](https://github.com/Microsoft/BotBuilde
 
 ### Step 1—Creating a C# basic Web App bot
 1. In Azure, create a new **C# Web App Bot**.
-2. Set the appropriate **Storage** and **Billing** requirements for your application.
+1. Set the appropriate **Storage** and **Billing** requirements for your application.
 
    The significant parts of this process are:  
     
@@ -37,7 +37,7 @@ using Newtonsoft.Json;
 using System.Timers;
 using Cafex.LiveAssist.Bot;
 ```
-2. More Complex Code
+1. More Complex Code
 
 ```csharp
         async void OnTimedEvent(Object source, ElapsedEventArgs eea)
