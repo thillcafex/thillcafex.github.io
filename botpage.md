@@ -18,7 +18,7 @@ See also: [BotBuilder samples repository](https://github.com/Microsoft/BotBuilde
    The significant parts of this process are:  
    * Selecting a name which is unique within Azure
    * Selecting the C# (Basic) Application  
-   ![alt](bot_images/img2.jpg)  
+   {% include figure.html file="bot_images/img2.jpg" caption="Select C#" %}  
  This process may take Azure a few minutes to build.  
     
 ### Step 4—Developing your application
