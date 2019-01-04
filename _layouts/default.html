@@ -5,13 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 <script src="https://raw.githubusercontent.com/DataMcFly/jquery.camelhunter/master/jquery.camelhunter.min.js"></script>
-<script type="text/javascript">
-	$("#search-field").camelHunter({
-		onKeyUp 			: true,
-		rss: "/search.xml",
-		results   : "#results"
-	});
-</script>  
 	  
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -73,5 +66,13 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+	  
+<script type="text/javascript">
+	$("#search-field").camelHunter({
+		onKeyUp 			: true,
+		rss: "/search.xml",
+		results   : "#results"
+	});
+</script>  	  
   </body>
 </html>
