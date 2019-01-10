@@ -24,7 +24,7 @@ function sendHeight()
     {
         // replace #wrapper with element that contains 
         // actual page content
-        var height= document.getElementById('wrapper').offsetHeight;
+        var height= document.getElementById('redoc_container').offsetHeight;
         parent.postMessage(height, '*');
     }
 }
